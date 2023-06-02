@@ -52,7 +52,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
             }}
           >
             {/* Bienvenue<motion.br/> sur le<motion.br/> Curriculum vitæ<motion.br/> d&apos;Albin */}
-            Test ...
+            Yo bro ...
           </motion.h1>
         </div>
       </div>

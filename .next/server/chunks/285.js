@@ -135,7 +135,7 @@ function Welcome({ refForNavigate  }) {
                             scale: welcomeTextScale,
                             opacity: welcomeTextOpacity
                         },
-                        children: "En maintenance ..."
+                        children: "Test ..."
                     })
                 ]
             })
