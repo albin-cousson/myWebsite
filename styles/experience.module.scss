@@ -1,0 +1,162 @@
+.experienceContainer {
+    z-index: 10000;
+    padding: 20px;
+    padding-top: 80px;
+    background: #000;
+    div {
+        position: sticky;  
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3.75rem;
+        border-width: 1px;
+        border-radius: 10px;
+        border-color: rgb(255 255 255);
+        background-color: #000;
+        color: #de1162;
+        border: 1px solid #de1162;
+        header {
+            div {
+                padding: 20px;
+                margin-bottom:0.625rem;
+                border: 0px;
+                h3 {
+                    display: inline-block;
+                    vertical-align: -webkit-baseline-middle;
+                    margin: 0;
+                    font-size: 2.5rem;
+                    font-weight: inherit;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    color: #de1162;
+                }
+                @media screen and (max-width: 700px) {
+                    h3{
+                        font-size:1rem;
+                    }
+                }
+            }
+            @media screen and (max-width: 700px) {
+                div{
+                    padding:20px;
+                }
+            }
+        }
+        section {
+            width: 100%;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                margin: 0;
+                padding: 0;
+                margin-left: 1.25rem;
+                margin-right: 1.25rem;
+                padding-top:1.25rem;
+                padding-bottom: 1.25rem;
+                border-top: 1px solid;
+                li {
+                    position: relative;
+                    display: flex;
+                    gap: 1.25rem;
+                    align-items: center;
+                    div {
+                        display: flex;
+                        flex-basis: 16.666667%;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #de1162;
+                        margin-bottom: 0;
+                        padding-top: 26px;
+                        padding-bottom: 26px;
+                        padding-left: 1.25rem;
+                        padding-right: 1.25rem;
+                        border-radius: 10px;
+                        font-size: 2rem;
+                        line-height: 1;
+                        text-align: center;
+                        color: #000;
+                    }
+                    @media screen and (max-width: 700px) {
+                        div{
+                            padding: 0.625rem;
+                            font-size: 14px;
+                        }
+                    }
+                    h4 {
+                        display: flex;
+                        flex-basis: 100%;
+                        align-items: center;
+                        background-color: #de1162;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        padding-left: 1.25rem;
+                        padding-right: 1.25rem;
+                        border-radius: 10px;
+                        font-size: 2rem;
+                        line-height: 1.25;
+                        color: #000;
+                    }
+                    @media screen and (max-width: 700px) {
+                        h4{
+                            padding: 0.625rem;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 700px) {
+                    li{
+                        gap: 0.625rem;
+
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            ul{
+                gap: 0.625rem;
+                margin-left: 0.625rem;
+                margin-right: 0.625rem;
+                padding-top:0.625rem;
+                padding-bottom: 0.625rem;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        div {
+            margin-bottom:0.625rem;
+        }
+    }
+    .kbrw {
+        top: 80px 
+    }
+    .credo {
+        top: 130px; 
+    }
+    .facilien {
+        top: 180px; 
+    }
+    .spinaliDesign {
+        top: 230px; 
+    }
+    @media screen and (max-width: 700px) {
+        .kbrw {
+            top: 30px 
+        }
+        .credo {
+            top: 60px; 
+        }
+        .facilien {
+            top: 90px; 
+        }
+        .spinaliDesign {
+            top: 120px; 
+        }
+    }
+}
+// @media screen and (max-width: 700px) {
+//     .experienceContainer {
+//         padding-top: 30px;
+//         background: #000;
+//     }
+// }

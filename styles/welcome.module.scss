@@ -1,0 +1,29 @@
+.welcomeContainer {
+  z-index: 10000;
+  height: 200vh;
+}
+
+.welcomeMotionWrapper {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.welcomeMotionImage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+}
+
+.welcomeMotionText {
+  z-index: 3;
+  text-align: center;
+  font-size: 40px;
+  color: #de1162;
+}

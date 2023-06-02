@@ -1,0 +1,43 @@
+.introContainer {
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #de1162;
+    .intro {
+        padding: 0px 150px 0px 150px;
+        h1 {
+            padding-bottom: 50px;
+            text-align: center;
+            font-size: 50px;
+            color: #000;
+        }
+        h2 {
+            text-align: center;
+            color: #000;
+            font-size: 33px;
+            .span {
+                font-family: 'Canela web','Times New Roman',sans-serif;
+                font-style: italic;
+                font-weight: 100;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .introContainer {
+        .intro {
+            padding: 0px 18px 0px 18px;
+            h1 {
+                font-size: 33px;
+            }
+            h2 {
+                font-size: 19px;
+            }
+        }
+    }
+}
+
