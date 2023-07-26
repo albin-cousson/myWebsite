@@ -38,6 +38,12 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  /* MES VARIABLES CSS */
+  --primary-color: rgb(0, 161, 73);
+  --secondary-color: rgb(252, 255, 245);
+  --secondary-contr-color: #e8e8e8;
+  --default-color: black;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -13,7 +13,7 @@ const nav = {
   closed: {
     display: "none",
     transition: {
-      delay: 1
+      delay: 2
     }
   }
 };

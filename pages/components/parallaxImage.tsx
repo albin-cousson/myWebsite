@@ -15,7 +15,7 @@ export default function ParallaxImage({refForNavigate}: {refForNavigate: any}) {
   return (
    <>
       <div ref={refForNavigate} className={styles.imageWrapper} style={{
-        backgroundImage: `url(/pictureOfMe/me&planetDesign.png)`,
+        backgroundImage: `url(/background/parallaxImageForSF.png)`,
       }}/>
    </>
   );

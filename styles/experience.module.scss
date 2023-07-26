@@ -1,8 +1,8 @@
 .experienceContainer {
-    z-index: 10000;
+    z-index: 5;
     padding: 20px;
     padding-top: 80px;
-    background: #000;
+    background: var(--secondary-color);
     div {
         position: sticky;  
         max-width: 80rem;
@@ -12,9 +12,9 @@
         border-width: 1px;
         border-radius: 10px;
         border-color: rgb(255 255 255);
-        background-color: #000;
-        color: #de1162;
-        border: 1px solid #de1162;
+        background-color: var(--secondary-color);
+        color: var(--default-color);
+        border: 1px solid var(--default-color);
         header {
             div {
                 padding: 20px;
@@ -28,7 +28,7 @@
                     font-weight: inherit;
                     line-height: 1;
                     text-transform: uppercase;
-                    color: #de1162;
+                    color: var(--primary-color);
                 }
                 @media screen and (max-width: 700px) {
                     h3{
@@ -65,7 +65,7 @@
                         flex-basis: 16.666667%;
                         justify-content: center;
                         align-items: center;
-                        background-color: #de1162;
+                        background-color: var(--secondary-contr-color);
                         margin-bottom: 0;
                         padding-top: 26px;
                         padding-bottom: 26px;
@@ -75,7 +75,7 @@
                         font-size: 2rem;
                         line-height: 1;
                         text-align: center;
-                        color: #000;
+                        color: var(--default-color);
                     }
                     @media screen and (max-width: 700px) {
                         div{
@@ -87,7 +87,7 @@
                         display: flex;
                         flex-basis: 100%;
                         align-items: center;
-                        background-color: #de1162;
+                        background-color: var(--secondary-contr-color);
                         padding-top: 16px;
                         padding-bottom: 16px;
                         padding-left: 1.25rem;
@@ -95,7 +95,8 @@
                         border-radius: 10px;
                         font-size: 2rem;
                         line-height: 1.25;
-                        color: #000;
+                        color: var(--default-color);
+                        border: 1px solid var(--default-color);
                     }
                     @media screen and (max-width: 700px) {
                         h4{
@@ -154,9 +155,3 @@
         }
     }
 }
-// @media screen and (max-width: 700px) {
-//     .experienceContainer {
-//         padding-top: 30px;
-//         background: #000;
-//     }
-// }

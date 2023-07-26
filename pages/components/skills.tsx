@@ -44,7 +44,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
       options: {
         width: clientWidth,
         height: clientHeight,
-        background: 'rgba(0,0,0,0.6)',
+        background: 'rgba(0,0,0,0.5)',
         wireframes: false,
       }
     });

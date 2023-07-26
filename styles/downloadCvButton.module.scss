@@ -1,5 +1,5 @@
 .downloadCvButton {     
-    z-index: 10002;
+    z-index: 100;
     position: fixed;
     top: 32px;
     right: 15px;
@@ -11,38 +11,17 @@
     padding-bottom: clamp(0.3125rem,0.2367rem + 0.3236vw,0.625rem);
     padding-left: clamp(0.625rem,0.4733rem + 0.6472vw,1.25rem);
     padding-right: clamp(0.625rem,0.4733rem + 0.6472vw,1.25rem);
-    border: 1px solid;
+    border: 1px solid var(--primary-color);
     border-radius: 9999px;
-    background: #de1162;
+    background: var(--secondary-color);
     color: #000;
     cursor: none;
+    p { 
+        color: var(--default-color);
+    }
     img{
         margin-left: 10px;
         margin-right: 2px;
     }
 }
 
-.downloadCvButton:hover {
-    // color: red;
-}
-
-// .test {
-//     height: 50px;
-//     z-index: 10003;
-//     position: fixed;
-//     top: 32px;
-//     right: 15px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: clamp(.875rem,.784rem + .3883vw,1.25rem);
-//     padding-top: clamp(0.3125rem,0.2367rem + 0.3236vw,0.625rem);
-//     padding-bottom: clamp(0.3125rem,0.2367rem + 0.3236vw,0.625rem);
-//     padding-left: clamp(0.625rem,0.4733rem + 0.6472vw,1.25rem);
-//     padding-right: clamp(0.625rem,0.4733rem + 0.6472vw,1.25rem);
-//     border: 1px solid;
-//     border-radius: 9999px;
-//     background: #000;
-//     color: #000;
-//     cursor: none;
-// }
