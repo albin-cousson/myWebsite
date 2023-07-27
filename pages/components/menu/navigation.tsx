@@ -16,12 +16,12 @@ const variants = {
 export default function Navigation({ handleMenuClick }: { handleMenuClick: any }) {
   return (
     <motion.ul className={styles.navigation} variants={variants}>
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/heart.png" label="Bienvenue" />
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/avatar.png" label="Une image de moi" />
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/glasses.png" label="Intro" />
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/share.png" label="Mon parcours" />
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/monitor.png" label="Mes compétences" />
-      <MenuItem handleMenuClick={handleMenuClick} icon="/images/menuIcons/contact.png" label="Contactez-moi" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/heart.png" label="Bienvenue" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/user.png" label="Une image de moi" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/interrogation.png" label="Intro" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/briefcase.png" label="Mon parcours" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/graduation-cap.png" label="Mes compétences" />
+      <MenuItem handleMenuClick={handleMenuClick} icon="/icons/comment.png" label="Contactez-moi" />
     </motion.ul>
   )
 };

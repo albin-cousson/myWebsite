@@ -35,7 +35,7 @@ export default function MenuItem({ handleMenuClick, label, icon }: MenuItemProps
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className={styles.iconPlaceholder}><img src={icon} alt=""/></div>
+      <div className={styles.iconPlaceholder}>{<img src={icon} alt=""/>}</div>
       <div className={styles.textPlaceholder}>{label}</div>
     </motion.li>
   );
