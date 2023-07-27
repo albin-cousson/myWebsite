@@ -1,21 +1,21 @@
 .introContainer {
-    z-index: 10000;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #de1162;
+    min-height: 100vh;
+    background-color: var(--default-color);
     .intro {
         padding: 0px 150px 0px 150px;
         h1 {
             padding-bottom: 50px;
             text-align: center;
             font-size: 50px;
-            color: #000;
+            color: var(--secondary-color);
         }
         h2 {
             text-align: center;
-            color: #000;
+            color: var(--secondary-color);
             font-size: 33px;
             .span {
                 font-family: 'Canela web','Times New Roman',sans-serif;

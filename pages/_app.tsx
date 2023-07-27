@@ -15,8 +15,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const cursorPos = (e: any) => {
     setCursorIsClick(false)
     if(cursorRef.current != null) {
-      cursorRef.current.style.top = (e.pageY - 8) - window.scrollY + "px";
-      cursorRef.current.style.left = e.pageX - 8 + "px";
+      cursorRef.current.style.top = (e.pageY - 0) - window.scrollY + "px";
+      cursorRef.current.style.left = e.pageX - 15 + "px";
     }
   }
 

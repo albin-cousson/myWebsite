@@ -25,7 +25,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
   }),
     world = engine.world;
 
-  useEffect(() => {        
+  useEffect(() => {
     setClientWidth(document.documentElement.clientWidth - 30);
     setClientHeight(document.documentElement.clientHeight - 60);
     const handleResize = () => {
@@ -44,7 +44,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
       options: {
         width: clientWidth,
         height: clientHeight,
-        background: 'rgba(0,0,0,0.6)',
+        background: 'rgba(252, 255, 245,0.5)',
         wireframes: false,
       }
     });
@@ -73,18 +73,18 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
 
     if (boxIsInView) {
       bodies.push(
-        Bodies.circle(clientWidth / 2 - 60, 120, 58, {
+        Bodies.circle(clientWidth / 2 - 75, 150, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
             sprite: {
-              texture: "/skills/node.png",
+              texture: "/skills/react.png",
               xScale: 1,
               yScale: 1
             }
           }
         }),
-        Bodies.circle(clientWidth / 2, 120, 60, {
+        Bodies.circle(clientWidth / 2, 150, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -95,18 +95,73 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 + 60, 120, 52, {
+        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
             sprite: {
-              texture: "/skills/react.png",
+              texture: "/skills/vue.png",
+              xScale: 1,
+              yScale: 1
+            }
+          }
+        }),
+        Bodies.circle(clientWidth / 2 - 75, 150, 75, {
+          frictionAir: 0.02,
+          restitution: 0.6,
+          render: {
+            sprite: {
+              texture: "/skills/express.png",
+              xScale: 1,
+              yScale: 1
+            }
+          }
+        }),
+        Bodies.circle(clientWidth / 2, 150, 75, {
+          frictionAir: 0.02,
+          restitution: 0.6,
+          render: {
+            sprite: {
+              texture: "/skills/nest.png",
+              xScale: 1,
+              yScale: 1
+            }
+          }
+        }),
+        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+          frictionAir: 0.02,
+          restitution: 0.6,
+          render: {
+            sprite: {
+              texture: "/skills/docker.png",
+              xScale: 1,
+              yScale: 1
+            }
+          }
+        }),
+        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+          frictionAir: 0.02,
+          restitution: 0.6,
+          render: {
+            sprite: {
+              texture: "/skills/git.png",
+              xScale: 1,
+              yScale: 1
+            }
+          }
+        }),
+        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+          frictionAir: 0.02,
+          restitution: 0.6,
+          render: {
+            sprite: {
+              texture: "/skills/jira.png",
               xScale: 1,
               yScale: 1
             }
           }
         })
-      );
+      )
     }
 
     Composite.add(world, bodies)
@@ -119,7 +174,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
           stiffness: 0.2,
           render: {
             visible: true,
-            strokeStyle: '#de1162',
+            strokeStyle: '#00a149',
             lineWidth: 2
           }
         }

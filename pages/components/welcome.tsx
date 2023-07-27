@@ -24,7 +24,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
     <>
       <div ref={refForNavigate} className={styles.welcomeContainer}>
         <div className={styles.welcomeMotionWrapper}>
-          <motion.img className={styles.welcomeMotionImage} src="/background/blackBackgroundForSmartphone.png" alt="" 
+          <motion.img className={styles.welcomeMotionImage} src="/background/welcomeBackground.png" alt="" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -33,7 +33,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
               opacity: welcomeImgWithoutBlurOpacity
             }}
           />
-          <motion.img className={styles.welcomeMotionImage} src='/background/blurBlackBackgroundForSmartphone.jpg' alt="" 
+          <motion.img className={styles.welcomeMotionImage} src='/background/welcomeBlurBackground.png' alt="" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -51,8 +51,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
               opacity: welcomeTextOpacity,
             }}
           >
-            {/* Bienvenue<motion.br/> sur le<motion.br/> Curriculum vitæ<motion.br/> d&apos;Albin */}
-            Salut bande d&lsquo;enfoiré ...
+            Bienvenue<motion.br/> sur le<motion.br/> Curriculum vitæ<motion.br/> d&apos;Albin
           </motion.h1>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function Footer({refForNavigate}: {refForNavigate: any}) {
         <>
             <div ref={refForNavigate} className={styles.sectionFooterSpacer}></div>
             <div className={styles.footer} style={{
-                zIndex: containerIsInView ? "3" : "1"
+                zIndex: containerIsInView ? "0" : "-10"
             }}>
                 <div className={styles.footerContent}>
                     <h2 className={styles.footerHeading}>✺ Let’s <br />collaborate</h2>

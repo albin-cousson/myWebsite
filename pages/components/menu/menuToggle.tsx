@@ -7,7 +7,7 @@ const Path = (props: any) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="#de1162"
+    stroke="var(--default-color)"
     strokeLinecap="round"
     {...props}
   />
@@ -35,7 +35,7 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
   return (
     <motion.button
       className={styles.toggleButton}
-      variants={buttonShadow}
+      // variants={buttonShadow}
       animate={isOpen ? "open" : "closed"}
       onClick={toggle}
     >
@@ -43,7 +43,7 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
-            open: { d: "M 3 16.5 L 17 2.5" }
+            open: { d: "M 3 18 L 20 2.5" }
           }}
           animate={isOpen ? "open" : "closed"}
           d="M 2 2.5 L 20 2.5"
@@ -62,7 +62,7 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
         <Path
           variants={{
             closed: { d: "M 2 16.346 L 20 16.346" },
-            open: { d: "M 3 2.5 L 17 16.346" }
+            open: { d: "M 3 2.5 L 20 18" }
           }}
           animate={isOpen ? "open" : "closed"}
           d="M 2 16.346 L 20 16.346"
