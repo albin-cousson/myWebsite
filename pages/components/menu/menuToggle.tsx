@@ -13,18 +13,10 @@ const Path = (props: any) => (
   />
 );
 
-const buttonShadow = {
-  open: {
-    boxShadow: "rgb(0, 0, 0) 0px 0px 0px", transition: {
-      delay: 0
-    }
-  },
-  closed: {
-    boxShadow: "rgb(0, 0, 0) 0px 0px 6px", transition: {
-      delay: 0.8
-    }
-  }
-};
+let notificationVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1}
+}
 
 type MenuToggleProps = {
   isOpen: boolean;
@@ -35,8 +27,9 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
   return (
     <motion.button
       className={styles.toggleButton}
-      // variants={buttonShadow}
-      animate={isOpen ? "open" : "closed"}
+      variants={notificationVariants}
+      initial="initial"
+      animate="animate"
       onClick={toggle}
     >
       <svg width="23" height="23" viewBox="-0.5 -1.5 23 23">
