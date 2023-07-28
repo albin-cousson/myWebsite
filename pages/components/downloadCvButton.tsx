@@ -1,27 +1,32 @@
-import React from 'react';
-import { motion, useScroll, useSpring } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, useScroll } from "framer-motion";
 
 import styles from '@/styles/downloadCvButton.module.scss'
 
 export default function DownloadCvButton() {
-  const { scrollYProgress } = useScroll();
+  // const [buttonIsHover, setButtonIsHover] = useState(false);
 
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const { scrollYProgress } = useScroll();
 
   return (
     <>
-       <motion.a className={styles.downloadCvButton} href={"/cv/cv_albin_cousson.pdf"} download
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <p>DL: CV</p>
-        <img src="/images/menuIcons/downloadBlack.png" alt=""/>
-      </motion.a>
-      {/* <motion.span className={styles.test} style={{ scaleY }}/> */}
+      <div className={styles.wrapperDownloadCvButton}>
+        <motion.a className={styles.downloadCvButton} href={"/cv/cv_albin_cousson.pdf"} download
+          // onMouseEnter={() => { setButtonIsHover(true) }}
+          // onMouseLeave={() => { setButtonIsHover(false) }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <p>DL: CV</p>
+          {/* {buttonIsHover ? <img src="/icons/inbox-in.png" alt="" /> : <img src="/icons/inbox-inb.png" alt="" />} */}
+          <img src="/icons/inbox-inb.png" alt="" />
+          <motion.div
+            style={{
+              scaleY: scrollYProgress
+            }}
+          />
+        </motion.a>
+      </div>
     </>
   );
 };
