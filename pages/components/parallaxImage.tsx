@@ -10,11 +10,19 @@ export default function ParallaxImage({refForNavigate}: {refForNavigate: any}) {
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const backgroundImage = isMobile ? '/background/parallaxImageForSF.png' : '/background/parallaxImage.png';
     setBackgroundImage(backgroundImage)    
+    const setParallaxImageIfResizeWindow = () => {
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+      const backgroundImage = isMobile ? '/background/parallaxImageForSF.png' : '/background/parallaxImage.png';
+      setBackgroundImage(backgroundImage)    
+    }
+    window.addEventListener("resize", setParallaxImageIfResizeWindow);
+    return () => window.removeEventListener("resize", setParallaxImageIfResizeWindow);
   }, []); 
 
   return (
    <>
-      <div ref={refForNavigate} className={styles.imageWrapper} style={{
+      <div ref={refForNavigate}></div>
+      <div className={styles.imageWrapper} style={{
         backgroundImage: `url(${backgroundImage})`,
       }}/>
    </>

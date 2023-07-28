@@ -29,8 +29,10 @@ export default function Home() {
 
   return (
     <>
-      <Menu handleMenuClick={handleMenuClick} />
-      <DownloadCvButton />
+      <div className={styles.topBar}>
+        <Menu handleMenuClick={handleMenuClick} />
+        <DownloadCvButton />
+      </div>
       <Welcome refForNavigate={welcome} />
       <ParallaxImage refForNavigate={parallaxImage} />
       <Intro refForNavigate={intro} />

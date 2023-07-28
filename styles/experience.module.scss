@@ -18,8 +18,17 @@
         header {
             div {
                 padding: 20px;
+                margin-top:0.625rem;
                 margin-bottom:0.625rem;
                 border: 0px;
+                @media screen and (max-width: 700px) {
+                    display: flex;
+                    margin: 0;
+                    padding-top:  18px !important;
+                    padding-bottom:  18px !important;
+                    padding-left:  14px !important;
+                    padding-right:  14px !important;
+                }
                 h3 {
                     display: inline-block;
                     vertical-align: -webkit-baseline-middle;
@@ -55,11 +64,17 @@
                 padding-top:1.25rem;
                 padding-bottom: 1.25rem;
                 border-top: 1px solid;
+                @media screen and (max-width: 700px) {
+                    margin: 0;
+                    margin-left: 14px;
+                    margin-right: 14px;
+                    padding-top:14px;
+                    padding-bottom: 14px;
+                }
                 li {
                     position: relative;
                     display: flex;
                     gap: 1.25rem;
-                    align-items: center;
                     div {
                         display: flex;
                         flex-basis: 16.666667%;
@@ -76,6 +91,7 @@
                         line-height: 1;
                         text-align: center;
                         color: var(--default-color);
+                        border: 0px;
                     }
                     @media screen and (max-width: 700px) {
                         div{
@@ -96,7 +112,7 @@
                         font-size: 2rem;
                         line-height: 1.25;
                         color: var(--default-color);
-                        border: 1px solid var(--default-color);
+                        font-weight: lighter;
                     }
                     @media screen and (max-width: 700px) {
                         h4{
@@ -128,30 +144,42 @@
             margin-bottom:0.625rem;
         }
     }
-    .kbrw {
+    .spurgin {
         top: 80px 
     }
-    .credo {
+    .scalian {
         top: 130px; 
     }
-    .facilien {
-        top: 180px; 
+    .kbrw {
+        top: 180px 
     }
-    .spinaliDesign {
+    .credo {
         top: 230px; 
     }
+    .facilien {
+        top: 280px; 
+    }
+    .spinaliDesign {
+        top: 330px; 
+    }
     @media screen and (max-width: 700px) {
-        .kbrw {
+        .spurgin {
             top: 30px 
         }
-        .credo {
+        .scalian {
             top: 60px; 
         }
+        .kbrw {
+            top: 90px 
+        }
+        .credo {
+            top: 120px; 
+        }
         .facilien {
-            top: 90px; 
+            top: 150px; 
         }
         .spinaliDesign {
-            top: 120px; 
+            top: 180px; 
         }
     }
 }
