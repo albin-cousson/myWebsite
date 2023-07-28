@@ -18,7 +18,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 04/2023 <br/>-<br/> 08/2023
                             </div>
                             <h4>
-                                Développement d'un logiciel SASS pour une usine.
+                                Développement d&rsquo;un logiciel SASS pour une usine.
                             </h4>
                         </li>
                     </ul>
@@ -37,7 +37,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 02/2023 <br/>-<br/> 04/2023
                             </div>
                             <h4>
-                                Update de l'interface de l&rsquo;app City Zen.
+                                Update de l&rsquo;interface de l&rsquo;app City Zen.
                             </h4>
                         </li>
                     </ul>
