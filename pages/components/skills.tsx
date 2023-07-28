@@ -21,7 +21,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     Bodies = Matter.Bodies;
 
   let engine = Engine.create({
-    enableSleeping: true
+    enableSleeping: false
   }),
     world = engine.world;
 
@@ -67,13 +67,12 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     let bodies = [
       Bodies.rectangle(clientWidth + offset, clientHeight / 2, 50.5, clientHeight, options),
       Bodies.rectangle(-offset, clientHeight / 2, 50.5, clientHeight, options),
-      Bodies.rectangle(clientWidth / 2, -offset, clientWidth, 50.5, options),
       Bodies.rectangle(clientWidth / 2, clientHeight + offset, clientWidth, 50.5, options),
     ]
 
     if (boxIsInView) {
       bodies.push(
-        Bodies.circle(clientWidth / 2 - 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 - 40, -100, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -84,7 +83,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2, 150, 75, {
+        Bodies.circle(clientWidth / 2 + 40, -100, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -95,7 +94,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 - 40, -220, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -106,7 +105,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 - 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 + 40, -220, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -117,7 +116,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2, 150, 75, {
+        Bodies.circle(clientWidth / 2 - 40, -340, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -128,7 +127,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 + 40, -340, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -139,7 +138,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 - 40, -460, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -150,7 +149,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
             }
           }
         }),
-        Bodies.circle(clientWidth / 2 + 75, 150, 75, {
+        Bodies.circle(clientWidth / 2 + 40, -460, 75, {
           frictionAir: 0.02,
           restitution: 0.6,
           render: {
@@ -162,6 +161,9 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
           }
         })
       )
+      setTimeout(()=>{
+        Composite.add(world, Bodies.rectangle(clientWidth / 2, -offset, clientWidth, 50.5, options))
+      }, 2000)
     }
 
     Composite.add(world, bodies)
