@@ -1,19 +1,19 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/components/downloadCvButton": "pages/components/downloadCvButton.html",
   "/api/hello": "pages/api/hello.js",
+  "/components/downloadCvButton": "pages/components/downloadCvButton.html",
+  "/components/experience": "pages/components/experience.html",
   "/components/footer": "pages/components/footer.html",
   "/components/intro": "pages/components/intro.html",
   "/components/menu/menu": "pages/components/menu/menu.html",
   "/components/menu/menuItem": "pages/components/menu/menuItem.html",
   "/components/menu/menuToggle": "pages/components/menu/menuToggle.html",
   "/components/menu/navigation": "pages/components/menu/navigation.html",
-  "/components/experience": "pages/components/experience.html",
-  "/components/parallaxImage": "pages/components/parallaxImage.html",
   "/components/skills": "pages/components/skills.html",
   "/components/welcome": "pages/components/welcome.html",
   "/": "pages/index.html",
+  "/components/parallaxImage": "pages/components/parallaxImage.html",
+  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
