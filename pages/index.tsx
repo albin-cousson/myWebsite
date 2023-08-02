@@ -30,7 +30,7 @@ export default function Home() {
     ]);
   }
 
-  function sendMessage(e) {
+  function sendMessage(e: any) {
     e.preventDefault();
     const msg = {
       username: e.target.username.value,
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="messages">
             {messages.map((msg: any) => {
               return (
-                <div>{msg.username}: {msg.text}</div>
+                <div key={msg.text}>{msg.username}: {msg.text}</div>
               )
             })}
           </div>
