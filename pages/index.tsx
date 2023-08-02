@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
-import io from 'socket.io-client';
+import { io, Socket } from 'socket.io-client';
+const socket: Socket = io('http://192.168.128.4:4000');
 
 import styles from '@/styles/Home.module.css'
 
@@ -14,31 +15,6 @@ import Experience from "./components/experience";
 import DownloadCvButton from "./components/downloadCvButton";
 
 export default function Home() {
-  const [messages, setMessages] = useState([] as any);
-
-  const socket = io('192.168.128.4:8000');
-
-  socket.on('SERVER_MSG', msg => {
-    setNewMessage(msg);
-  });
-
-  function setNewMessage(msg: any[]) {
-    setMessages([
-      ...messages,
-      msg[0],
-      msg[1]
-    ]);
-  }
-
-  function sendMessage(e: any) {
-    e.preventDefault();
-    const msg = {
-      username: e.target.username.value,
-      text: e.target.text.value
-    };
-    socket.emit('CLIENT_MSG', msg);
-  }
-
   const welcome = useRef<HTMLElement>(null);
   const parallaxImage = useRef<HTMLElement>(null);
   const intro = useRef<HTMLElement>(null);
@@ -60,37 +36,6 @@ export default function Home() {
         <DownloadCvButton />
       </div>
       <Welcome refForNavigate={welcome} />
-      <div style={{zIndex: 1000000}}>
-        <div>
-          <div className="messages">
-            {messages.map((msg: any) => {
-              return (
-                <div key={msg.text}>{msg.username}: {msg.text}</div>
-              )
-            })}
-          </div>
-        </div>
-        <form onSubmit={e => sendMessage(e)}>
-          <div className="card-footer">
-            <input id="username"
-              type="text"
-              placeholder="Username"
-              className="form-control"
-            />
-            <br />
-            <input id="text"
-              type="text"
-              placeholder="Your message"
-              className="form-control"
-            />
-            <br />
-            <button type="submit"
-              className="btn btn-primary form-control">
-              send
-            </button>
-          </div>
-        </form>
-      </div >
       <ParallaxImage refForNavigate={parallaxImage} />
       <Intro refForNavigate={intro} />
       <Experience refForNavigate={experience} />

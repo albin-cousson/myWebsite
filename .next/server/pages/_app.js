@@ -1,122 +1,62 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 888;
-exports.ids = [888,481,695,272,182,283,179,328,949,362];
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
 exports.modules = {
 
-/***/ 2295:
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"pages\\\\_app.tsx\",\"import\":\"Michroma\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"400\"]}],\"variableName\":\"inter\"}":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"pages\\_app.tsx","import":"Michroma","arguments":[{"subsets":["latin"],"weight":["400"]}],"variableName":"inter"} ***!
+  \*****************************************************************************************************************************************************************************/
 /***/ ((module) => {
 
-// Exports
-module.exports = {
-	"style": {"fontFamily":"'__Michroma_6d92eb', '__Michroma_Fallback_6d92eb'","fontWeight":400,"fontStyle":"normal"},
-	"className": "__className_6d92eb"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Michroma_6d92eb', '__Michroma_Fallback_6d92eb'\",\"fontWeight\":400,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_6d92eb\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcInBhZ2VzXFxcXF9hcHAudHN4XCIsXCJpbXBvcnRcIjpcIk1pY2hyb21hXCIsXCJhcmd1bWVudHNcIjpbe1wic3Vic2V0c1wiOltcImxhdGluXCJdLFwid2VpZ2h0XCI6W1wiNDAwXCJdfV0sXCJ2YXJpYWJsZU5hbWVcIjpcImludGVyXCJ9LmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSxXQUFXLHVHQUF1RztBQUNsSDtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbXl3ZWJzaXRlLy4vbm9kZV9tb2R1bGVzL25leHQvZm9udC9nb29nbGUvdGFyZ2V0LmNzcz9hNmI4Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInN0eWxlXCI6IHtcImZvbnRGYW1pbHlcIjpcIidfX01pY2hyb21hXzZkOTJlYicsICdfX01pY2hyb21hX0ZhbGxiYWNrXzZkOTJlYidcIixcImZvbnRXZWlnaHRcIjo0MDAsXCJmb250U3R5bGVcIjpcIm5vcm1hbFwifSxcblx0XCJjbGFzc05hbWVcIjogXCJfX2NsYXNzTmFtZV82ZDkyZWJcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"pages\\\\_app.tsx\",\"import\":\"Michroma\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"400\"]}],\"variableName\":\"inter\"}\n");
 
 /***/ }),
 
-/***/ 1914:
+/***/ "./styles/Home.module.css":
+/*!********************************!*\
+  !*** ./styles/Home.module.css ***!
+  \********************************/
 /***/ ((module) => {
 
-// Exports
-module.exports = {
-	"main": "Home_main__nLjiQ",
-	"description": "Home_description__41Owk",
-	"code": "Home_code__suPER",
-	"grid": "Home_grid__GxQ85",
-	"card": "Home_card___LpL1",
-	"center": "Home_center__4BFgC",
-	"logo": "Home_logo__27_tb",
-	"thirteen": "Home_thirteen__cMI_k",
-	"rotate": "Home_rotate____XsI",
-	"content": "Home_content__Zy02X",
-	"vercelLogo": "Home_vercelLogo__dtSk9",
-	"topBar": "Home_topBar__e8y18",
-	"persoCursor": "Home_persoCursor__of1C8",
-	"topProgressBar": "Home_topProgressBar__e6uxR",
-	"bottomProgressBar": "Home_bottomProgressBar__EwVMw"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"main\": \"Home_main__nLjiQ\",\n\t\"description\": \"Home_description__41Owk\",\n\t\"code\": \"Home_code__suPER\",\n\t\"grid\": \"Home_grid__GxQ85\",\n\t\"card\": \"Home_card___LpL1\",\n\t\"center\": \"Home_center__4BFgC\",\n\t\"logo\": \"Home_logo__27_tb\",\n\t\"thirteen\": \"Home_thirteen__cMI_k\",\n\t\"rotate\": \"Home_rotate____XsI\",\n\t\"content\": \"Home_content__Zy02X\",\n\t\"vercelLogo\": \"Home_vercelLogo__dtSk9\",\n\t\"topBar\": \"Home_topBar__e8y18\",\n\t\"persoCursor\": \"Home_persoCursor__of1C8\",\n\t\"topProgressBar\": \"Home_topProgressBar__e6uxR\",\n\t\"bottomProgressBar\": \"Home_bottomProgressBar__EwVMw\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL215d2Vic2l0ZS8uL3N0eWxlcy9Ib21lLm1vZHVsZS5jc3M/YzRmNyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJtYWluXCI6IFwiSG9tZV9tYWluX19uTGppUVwiLFxuXHRcImRlc2NyaXB0aW9uXCI6IFwiSG9tZV9kZXNjcmlwdGlvbl9fNDFPd2tcIixcblx0XCJjb2RlXCI6IFwiSG9tZV9jb2RlX19zdVBFUlwiLFxuXHRcImdyaWRcIjogXCJIb21lX2dyaWRfX0d4UTg1XCIsXG5cdFwiY2FyZFwiOiBcIkhvbWVfY2FyZF9fX0xwTDFcIixcblx0XCJjZW50ZXJcIjogXCJIb21lX2NlbnRlcl9fNEJGZ0NcIixcblx0XCJsb2dvXCI6IFwiSG9tZV9sb2dvX18yN190YlwiLFxuXHRcInRoaXJ0ZWVuXCI6IFwiSG9tZV90aGlydGVlbl9fY01JX2tcIixcblx0XCJyb3RhdGVcIjogXCJIb21lX3JvdGF0ZV9fX19Yc0lcIixcblx0XCJjb250ZW50XCI6IFwiSG9tZV9jb250ZW50X19aeTAyWFwiLFxuXHRcInZlcmNlbExvZ29cIjogXCJIb21lX3ZlcmNlbExvZ29fX2R0U2s5XCIsXG5cdFwidG9wQmFyXCI6IFwiSG9tZV90b3BCYXJfX2U4eTE4XCIsXG5cdFwicGVyc29DdXJzb3JcIjogXCJIb21lX3BlcnNvQ3Vyc29yX19vZjFDOFwiLFxuXHRcInRvcFByb2dyZXNzQmFyXCI6IFwiSG9tZV90b3BQcm9ncmVzc0Jhcl9fZTZ1eFJcIixcblx0XCJib3R0b21Qcm9ncmVzc0JhclwiOiBcIkhvbWVfYm90dG9tUHJvZ3Jlc3NCYXJfX0V3Vk13XCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./styles/Home.module.css\n");
 
 /***/ }),
 
-/***/ 7542:
+/***/ "./pages/_app.tsx":
+/*!************************!*\
+  !*** ./pages/_app.tsx ***!
+  \************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ App)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2295);
-/* harmony import */ var next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3862);
-/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1914);
-/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6197);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__]);
-framer_motion__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
-
-
-
-
-
-function App({ Component , pageProps  }) {
-    const cursorRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)();
-    const [cursorIsClick, setCursorIsClick] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
-    const cursorPos = (e)=>{
-        setCursorIsClick(false);
-        if (cursorRef.current != null) {
-            cursorRef.current.style.top = e.pageY - 0 - window.scrollY + "px";
-            cursorRef.current.style.left = e.pageX - 15 + "px";
-        }
-    };
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
-        onMouseEnter: cursorPos,
-        onMouseMove: cursorPos,
-        className: (next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4___default().className),
-        onMouseDown: ()=>setCursorIsClick(true),
-        onMouseUp: ()=>setCursorIsClick(false),
-        children: [
-            !cursorIsClick ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.img, {
-                ref: cursorRef,
-                className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default().persoCursor),
-                src: "/cursors/cursor.png",
-                alt: ""
-            }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.img, {
-                ref: cursorRef,
-                className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default().persoCursor),
-                src: "/cursors/cursorOnClick.png",
-                alt: ""
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
-                ...pageProps
-            })
-        ]
-    });
-}
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"pages\\\\_app.tsx\",\"import\":\"Michroma\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"400\"]}],\"variableName\":\"inter\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"pages\\\\\\\\_app.tsx\\\",\\\"import\\\":\\\"Michroma\\\",\\\"arguments\\\":[{\\\"subsets\\\":[\\\"latin\\\"],\\\"weight\\\":[\\\"400\\\"]}],\\\"variableName\\\":\\\"inter\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/styles/Home.module.css */ \"./styles/Home.module.css\");\n/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! framer-motion */ \"framer-motion\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__]);\nframer_motion__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\n\n\nfunction App({ Component , pageProps  }) {\n    const cursorRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)();\n    const [cursorIsClick, setCursorIsClick] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);\n    const cursorPos = (e)=>{\n        setCursorIsClick(false);\n        if (cursorRef.current != null) {\n            cursorRef.current.style.top = e.pageY - 0 - window.scrollY + \"px\";\n            cursorRef.current.style.left = e.pageX - 15 + \"px\";\n        }\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n        onMouseEnter: cursorPos,\n        onMouseMove: cursorPos,\n        className: (next_font_google_target_css_path_pages_app_tsx_import_Michroma_arguments_subsets_latin_weight_400_variableName_inter___WEBPACK_IMPORTED_MODULE_4___default().className),\n        onMouseDown: ()=>setCursorIsClick(true),\n        onMouseUp: ()=>setCursorIsClick(false),\n        children: [\n            !cursorIsClick ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.img, {\n                ref: cursorRef,\n                className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default().persoCursor),\n                src: \"/cursors/cursor.png\",\n                alt: \"\"\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\acousson\\\\Desktop\\\\workflow\\\\project\\\\myWebsite\\\\pages\\\\_app.tsx\",\n                lineNumber: 25,\n                columnNumber: 25\n            }, this) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.img, {\n                ref: cursorRef,\n                className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_5___default().persoCursor),\n                src: \"/cursors/cursorOnClick.png\",\n                alt: \"\"\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\acousson\\\\Desktop\\\\workflow\\\\project\\\\myWebsite\\\\pages\\\\_app.tsx\",\n                lineNumber: 25,\n                columnNumber: 121\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n                ...pageProps\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\acousson\\\\Desktop\\\\workflow\\\\project\\\\myWebsite\\\\pages\\\\_app.tsx\",\n                lineNumber: 26,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\acousson\\\\Desktop\\\\workflow\\\\project\\\\myWebsite\\\\pages\\\\_app.tsx\",\n        lineNumber: 24,\n        columnNumber: 5\n    }, this);\n}\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBT01BO0FBUHVCO0FBQ2dCO0FBRU87QUFDYjtBQUt4QixTQUFTSyxJQUFJLEVBQUVDLFVBQVMsRUFBRUMsVUFBUyxFQUFZLEVBQUU7SUFDOUQsTUFBTUMsWUFBWUwsNkNBQU1BO0lBRXhCLE1BQU0sQ0FBQ00sZUFBZUMsaUJBQWlCLEdBQUdSLCtDQUFRQSxDQUFDLEtBQUs7SUFFeEQsTUFBTVMsWUFBWSxDQUFDQyxJQUFXO1FBQzVCRixpQkFBaUIsS0FBSztRQUN0QixJQUFHRixVQUFVSyxPQUFPLElBQUksSUFBSSxFQUFFO1lBQzVCTCxVQUFVSyxPQUFPLENBQUNDLEtBQUssQ0FBQ0MsR0FBRyxHQUFHLEVBQUdDLEtBQUssR0FBRyxJQUFLQyxPQUFPQyxPQUFPLEdBQUc7WUFDL0RWLFVBQVVLLE9BQU8sQ0FBQ0MsS0FBSyxDQUFDSyxJQUFJLEdBQUdQLEVBQUVRLEtBQUssR0FBRyxLQUFLO1FBQ2hELENBQUM7SUFDSDtJQUVBLHFCQUNFLDhEQUFDQztRQUFLQyxjQUFjWDtRQUFXWSxhQUFhWjtRQUFXYSxXQUFXeEIsd0tBQWU7UUFBRXlCLGFBQWEsSUFBSWYsaUJBQWlCLElBQUk7UUFBR2dCLFdBQVcsSUFBSWhCLGlCQUFpQixLQUFLOztZQUM5SixDQUFDRCw4QkFBZ0IsOERBQUNMLHFEQUFVO2dCQUFDd0IsS0FBS3BCO2dCQUFXZ0IsV0FBV3ZCLDRFQUFrQjtnQkFBRTZCLEtBQUk7Z0JBQXNCQyxLQUFJOzs7OztxQ0FBTyw4REFBQzNCLHFEQUFVO2dCQUFDd0IsS0FBS3BCO2dCQUFXZ0IsV0FBV3ZCLDRFQUFrQjtnQkFBRTZCLEtBQUk7Z0JBQTZCQyxLQUFJOzs7OztvQkFBSTswQkFDdE4sOERBQUN6QjtnQkFBVyxHQUFHQyxTQUFTOzs7Ozs7Ozs7Ozs7QUFHOUIsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL215d2Vic2l0ZS8uL3BhZ2VzL19hcHAudHN4PzJmYmUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdAL3N0eWxlcy9nbG9iYWxzLmNzcydcclxuaW1wb3J0IHN0eWxlcyBmcm9tICdAL3N0eWxlcy9Ib21lLm1vZHVsZS5jc3MnXHJcbmltcG9ydCB0eXBlIHsgQXBwUHJvcHMgfSBmcm9tICduZXh0L2FwcCdcclxuaW1wb3J0IHsgdXNlU3RhdGUsIHVzZVJlZiwgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBtb3Rpb24gfSBmcm9tIFwiZnJhbWVyLW1vdGlvblwiO1xyXG5pbXBvcnQgeyBPcmJpdHJvbiwgTWljaHJvbWEsIEdhanJhal9PbmUsIEJhbmdlcnMsIEJsYWNrX09wc19PbmUgfSBmcm9tICduZXh0L2ZvbnQvZ29vZ2xlJ1xyXG5cclxuY29uc3QgaW50ZXIgPSBNaWNocm9tYSh7IHN1YnNldHM6IFsnbGF0aW4nXSwgd2VpZ2h0OiBbJzQwMCddLCB9KVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfTogQXBwUHJvcHMpIHtcclxuICBjb25zdCBjdXJzb3JSZWYgPSB1c2VSZWY8YW55PigpXHJcblxyXG4gIGNvbnN0IFtjdXJzb3JJc0NsaWNrLCBzZXRDdXJzb3JJc0NsaWNrXSA9IHVzZVN0YXRlKGZhbHNlKTtcclxuXHJcbiAgY29uc3QgY3Vyc29yUG9zID0gKGU6IGFueSkgPT4ge1xyXG4gICAgc2V0Q3Vyc29ySXNDbGljayhmYWxzZSlcclxuICAgIGlmKGN1cnNvclJlZi5jdXJyZW50ICE9IG51bGwpIHtcclxuICAgICAgY3Vyc29yUmVmLmN1cnJlbnQuc3R5bGUudG9wID0gKGUucGFnZVkgLSAwKSAtIHdpbmRvdy5zY3JvbGxZICsgXCJweFwiO1xyXG4gICAgICBjdXJzb3JSZWYuY3VycmVudC5zdHlsZS5sZWZ0ID0gZS5wYWdlWCAtIDE1ICsgXCJweFwiO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxtYWluIG9uTW91c2VFbnRlcj17Y3Vyc29yUG9zfSBvbk1vdXNlTW92ZT17Y3Vyc29yUG9zfSBjbGFzc05hbWU9e2ludGVyLmNsYXNzTmFtZX0gb25Nb3VzZURvd249eygpPT5zZXRDdXJzb3JJc0NsaWNrKHRydWUpfSBvbk1vdXNlVXA9eygpPT5zZXRDdXJzb3JJc0NsaWNrKGZhbHNlKX0+XHJcbiAgICAgIHshY3Vyc29ySXNDbGljayA/IDxtb3Rpb24uaW1nIHJlZj17Y3Vyc29yUmVmfSBjbGFzc05hbWU9e3N0eWxlcy5wZXJzb0N1cnNvcn0gc3JjPVwiL2N1cnNvcnMvY3Vyc29yLnBuZ1wiIGFsdD1cIlwiLz4gOiA8bW90aW9uLmltZyByZWY9e2N1cnNvclJlZn0gY2xhc3NOYW1lPXtzdHlsZXMucGVyc29DdXJzb3J9IHNyYz1cIi9jdXJzb3JzL2N1cnNvck9uQ2xpY2sucG5nXCIgYWx0PVwiXCIvPn1cclxuICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxyXG4gICAgPC9tYWluPlxyXG4gIClcclxufVxyXG4iXSwibmFtZXMiOlsiaW50ZXIiLCJzdHlsZXMiLCJ1c2VTdGF0ZSIsInVzZVJlZiIsIm1vdGlvbiIsIkFwcCIsIkNvbXBvbmVudCIsInBhZ2VQcm9wcyIsImN1cnNvclJlZiIsImN1cnNvcklzQ2xpY2siLCJzZXRDdXJzb3JJc0NsaWNrIiwiY3Vyc29yUG9zIiwiZSIsImN1cnJlbnQiLCJzdHlsZSIsInRvcCIsInBhZ2VZIiwid2luZG93Iiwic2Nyb2xsWSIsImxlZnQiLCJwYWdlWCIsIm1haW4iLCJvbk1vdXNlRW50ZXIiLCJvbk1vdXNlTW92ZSIsImNsYXNzTmFtZSIsIm9uTW91c2VEb3duIiwib25Nb3VzZVVwIiwiaW1nIiwicmVmIiwicGVyc29DdXJzb3IiLCJzcmMiLCJhbHQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/_app.tsx\n");
 
 /***/ }),
 
-/***/ 3862:
+/***/ "./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 6689:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
 "use strict";
@@ -124,15 +64,21 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ }),
 
-/***/ 6197:
+/***/ "framer-motion":
+/*!********************************!*\
+  !*** external "framer-motion" ***!
+  \********************************/
 /***/ ((module) => {
 
 "use strict";
@@ -147,7 +93,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(7542));
+var __webpack_exports__ = (__webpack_exec__("./pages/_app.tsx"));
 module.exports = __webpack_exports__;
 
 })();
