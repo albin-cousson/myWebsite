@@ -1,6 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { io, Socket } from 'socket.io-client';
-const socket: Socket = io('https://192.168.128.4:4000');
 
 import styles from '@/styles/Home.module.css'
 
