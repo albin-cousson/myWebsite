@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react';
-
-import styles from '@/styles/Home.module.css'
+import React, { useRef, useState, useEffect } from 'react';
+import styles from '@/styles/Home.module.css';
 
 /////////////////////////// @ COMPONENTS @ ///////////////////////////
 import Menu from "./components/menu/menu";
@@ -20,12 +19,33 @@ export default function Home() {
   const skills = useRef<HTMLElement>(null);
   const footer = useRef<HTMLElement>(null);
 
+  const [isScrollMiddle, setIsScrollMiddle] = useState(false);
+
   const handleMenuClick = (refName: any) => {
     const ref = (refName === 'Bienvenue' ? welcome : (refName === 'Une image de moi' ? parallaxImage : (refName === 'Intro' ? intro : (refName === 'Mon parcours' ? experience : (refName === 'Mes compétences' ? skills : footer)))));
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+
+    if (scrollTop >= (documentHeight / 2 - windowHeight)) {
+      setIsScrollMiddle(true);
+    } else {
+      setIsScrollMiddle(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -38,7 +58,7 @@ export default function Home() {
       <Intro refForNavigate={intro} />
       <Experience refForNavigate={experience} />
       <Skills refForNavigate={skills} />
-      <Footer refForNavigate={footer} />
+      <Footer refForNavigate={footer} isScrollMiddle={isScrollMiddle} />
     </>
-  )
+  );
 }
