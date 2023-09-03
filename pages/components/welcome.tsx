@@ -50,7 +50,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
               scale: welcomeTextScale,
               opacity: welcomeTextOpacity,
             }}
-          >
+          > 
             BIENVENUE<motion.br/> SUR LE<motion.br/> CURRICULUM VITÆ<motion.br/> D&apos;ALBIN
           </motion.h1>
         </div>
