@@ -20,9 +20,10 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }
 
+
   return (
     <main onMouseEnter={cursorPos} onMouseMove={cursorPos} className={inter.className} onMouseDown={()=>setCursorIsClick(true)} onMouseUp={()=>setCursorIsClick(false)}>
-      {!cursorIsClick ? <motion.img ref={cursorRef} className={styles.persoCursor} src="/cursors/cursor.png" alt=""/> : <motion.img ref={cursorRef} className={styles.persoCursor} src="/cursors/cursorOnClick.png" alt=""/>}
+      {!cursorIsClick ? <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} ref={cursorRef} className={styles.persoCursor} src="/cursors/cursor.png" alt=""/> : <motion.img ref={cursorRef} className={styles.persoCursor} src="/cursors/cursorOnClick.png" alt=""/>}
       <Component {...pageProps} />
     </main>
   )

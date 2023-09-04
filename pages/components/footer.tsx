@@ -12,7 +12,7 @@ export default function Footer({refForNavigate, isScrollMiddle}: {refForNavigate
                     <h2 className={styles.footerHeading}>✺ Let’s <br />collaborate</h2>
                     <div className={styles.footerContact}>
                         <a href="mailto:albincousson@icloud.com">
-                            albincousson@icloud.com
+                            albincousson7@gmail.com
                         </a>
                         <p>
                             06.15.06.98.37
