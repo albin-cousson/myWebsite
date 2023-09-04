@@ -41,6 +41,7 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
       variants={notificationVariants}
       initial="initial"
       animate="animate"
+      transition={{ duration: 0.6 }}
       onClick={toggle}
     >
       {isMobile ?

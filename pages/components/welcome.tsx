@@ -13,7 +13,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
   const welcomeTextScale = useTransform(scrollYProgress, [0, endAnimation], [1, 10]);
   const welcomeTextOpacity = useTransform(scrollYProgress, [0, endAnimation / 2, endAnimation], [1, 1, 0]);
 
-  useEffect(() => {    
+  useEffect(() => {        
     const totalPageHeight = document.documentElement.scrollHeight / document.documentElement.clientHeight * 100;
     const remainingPageHeight = +totalPageHeight - 100;
     const percentageOfTotalPage = 100 / remainingPageHeight;    
@@ -27,7 +27,8 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
           <motion.img className={styles.welcomeMotionImage} src="/background/welcomeBackground.png" alt="" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1.6 }}
+
             style={{
               zIndex: 1,
               opacity: welcomeImgWithoutBlurOpacity
@@ -36,16 +37,16 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
           <motion.img className={styles.welcomeMotionImage} src='/background/welcomeBlurBackground.png' alt="" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             style={{
               zIndex: 2,
               opacity: welcomeImgWithBlurOpacity
             }}
           />
           <motion.h1 className={styles.welcomeMotionText}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             style={{
               scale: welcomeTextScale,
               opacity: welcomeTextOpacity,

@@ -12,6 +12,7 @@ export default function DownloadCvButton() {
         <motion.a className={styles.downloadCvButton} href={"/cv/cv_albin_cousson.pdf"} download
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
         >
           <p>DL: CV</p>
           <img src="/icons/inbox.png" alt="" />

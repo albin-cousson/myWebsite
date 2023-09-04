@@ -190,7 +190,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     (mouseConstraint.mouse as { [key: string]: any }).element.removeEventListener("mousewheel", (mouseConstraint.mouse as { [key: string]: any }).mousewheel);
     (mouseConstraint.mouse as { [key: string]: any }).element.removeEventListener("DOMMouseScroll", (mouseConstraint.mouse as { [key: string]: any }).mousewheel);
 
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const isMobile = window.matchMedia('(max-width: 911px)').matches;
 
     if (isMobile) {
       (mouseConstraint.mouse as { [key: string]: any }).element.removeEventListener("touchstart", (mouseConstraint.mouse as { [key: string]: any }).mousedown);
