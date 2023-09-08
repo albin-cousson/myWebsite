@@ -225,7 +225,9 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
         // Utilisez les coordonnées converties du point de contact tactile de manière similaire à l'événement de la souris
         const clickedBodies = Matter.Query.point(bodies, { x: convertedX, y: convertedY });
 
-        if (clickedBodies.length > 0) {
+        if (clickedBodies.length > 0) {   
+          (mouseConstraint.mouse as { [key: string]: any }).element.removeEventListener("mousewheel", (mouseConstraint.mouse as { [key: string]: any }).mousewheel);
+          (mouseConstraint.mouse as { [key: string]: any }).element.removeEventListener("DOMMouseScroll", (mouseConstraint.mouse as { [key: string]: any }).mousewheel);
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchstart", (mouseConstraint.mouse as { [key: string]: any }).mousedown);
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchmove", (mouseConstraint.mouse as { [key: string]: any }).mousemove);;
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchend", (mouseConstraint.mouse as { [key: string]: any }).mouseup);
