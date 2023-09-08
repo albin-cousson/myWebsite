@@ -41,6 +41,9 @@ const sidebar = {
 const dateVariant = {
   open: () => ({
     opacity: 1,
+    transition: {
+      delay: 0.5,
+    }
   }),
   closed: {
     opacity: 0,
