@@ -224,10 +224,12 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
 
         // Utilisez les coordonnées converties du point de contact tactile de manière similaire à l'événement de la souris
         const clickedBodies = Matter.Query.point(bodies, { x: convertedX, y: convertedY });
-
+        document.addEventListener("touchmove", function(event) {
+          if (clickedBodies.length > 0) {
+            event.preventDefault();
+          }
+        });
         if (clickedBodies.length > 0) {   
-          event.preventDefault();
-
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchstart", (mouseConstraint.mouse as { [key: string]: any }).mousedown);
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchmove", (mouseConstraint.mouse as { [key: string]: any }).mousemove);;
           (mouseConstraint.mouse as { [key: string]: any }).element.addEventListener("touchend", (mouseConstraint.mouse as { [key: string]: any }).mouseup);
