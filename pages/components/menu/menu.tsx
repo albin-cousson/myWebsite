@@ -38,6 +38,19 @@ const sidebar = {
   }
 };
 
+const dateVariant = {
+  open: () => ({
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+    }
+  }),
+  closed: {
+    opacity: 0,
+    
+  }
+};
+
 export default function Menu({handleMenuClick}: {handleMenuClick: any}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef<HTMLElement | null>(null);
@@ -64,7 +77,14 @@ export default function Menu({handleMenuClick}: {handleMenuClick: any}) {
         custom={dimensions.current.height}
         ref={containerRef}
       >
-        <motion.div className={styles.background} variants={sidebar} />
+        <motion.div className={styles.background} variants={sidebar} >
+          <motion.div 
+            animate={isOpen ? "open" : "closed"}
+            variants={dateVariant}
+            >
+            2023
+          </motion.div>
+        </motion.div>
         <div onClick={() => toggleOpen()}>
           <Navigation handleMenuClick={handleMenuClick}/>
         </div>

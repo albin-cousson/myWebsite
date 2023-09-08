@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/footer.module.scss'
 
-export default function Footer({refForNavigate, isScrollMiddle}: {refForNavigate: any, isScrollMiddle: any}) {
+export default function Footer({ refForNavigate, isScrollMiddle }: { refForNavigate: any, isScrollMiddle: any }) {
     return (
         <>
             <div ref={refForNavigate} className={styles.sectionFooterSpacer}></div>
