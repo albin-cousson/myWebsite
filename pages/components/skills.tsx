@@ -7,6 +7,8 @@ import Matter from 'matter-js';
 export default function Skills({ refForNavigate }: { refForNavigate: any }) {
   const canvasRef = useRef<any>();
 
+  const playTextRef = useRef<any>();
+  
   const [clientWidth, setClientWidth] = useState(0)
   const [clientHeight, setClientHeight] = useState(0)
 
@@ -26,6 +28,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     world = engine.world;
 
   useEffect(() => {
+
     setClientWidth(document.documentElement.clientWidth - 30);
     setClientHeight(document.documentElement.clientHeight - 60);
     const handleResize = () => {
@@ -37,6 +40,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
   }, [])
 
   useEffect(() => {
+
     let render = Render.create({
       engine: engine,
       element: refForNavigate.current,
@@ -161,7 +165,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
           }
         })
       )
-      setTimeout(()=>{
+      setTimeout(() => {
         Composite.add(world, Bodies.rectangle(clientWidth / 2, -offset, clientWidth, 50.5, options))
       }, 2000)
     }
@@ -235,10 +239,44 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
       })
     }
 
+    const speed = 75;
+    const playTextElement = playTextRef.current; 
+    const playText = "PLAY !"; 
+
+    const typeEffect = (element: HTMLElement, text: string, speed: number) => {
+      let i = 0;
+      element.innerHTML = '';
+
+      const timer = setInterval(() => {
+        if (i < text.length) {
+          element.append(text.charAt(i));
+          i++;
+        } else {
+          clearInterval(timer);
+          // Une fois l'effet de frappe initial terminé, commencez l'effet de frappe inverse
+          setTimeout(() => {
+            const reverseTimer = setInterval(() => {
+              if (i >= 0) {
+                element.innerHTML = text.substring(0, i);
+                i--;
+              } else {
+                clearInterval(reverseTimer);
+              }
+            }, speed);
+          }, 1000); // Attendez 1 seconde avant de commencer l'effet inverse (ajustez selon vos préférences)
+        }
+      }, speed);
+    };
+    
+    if(boxIsInView) {
+      typeEffect(playTextElement, playText, speed);
+    }
+
   }, [clientWidth, clientHeight, boxIsInView])
 
   return (
     <div className={styles.skillsContainer}>
+      <h1 className={styles.playText} ref={playTextRef}></h1>
       <div ref={refForNavigate}>
         <canvas ref={canvasRef} />
       </div>
