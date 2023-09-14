@@ -33,11 +33,12 @@ export default function Home() {
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.scrollY;
 
-    if (scrollTop >= (documentHeight / 2 - windowHeight)) {
+    if (scrollTop >= (documentHeight / 1.5 - windowHeight)) {
       setIsScrollMiddle(true);
     } else {
       setIsScrollMiddle(false);
     }
+    
   };
 
   useEffect(() => {

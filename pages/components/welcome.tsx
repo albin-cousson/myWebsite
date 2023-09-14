@@ -1,5 +1,7 @@
 import styles from '@/styles/welcome.module.scss'
 
+import Image from 'next/image'
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from 'react';
 
@@ -26,9 +28,6 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
         <div className={styles.welcomeMotionWrapper}>
           <motion.img className={styles.welcomeMotionImage} src="/background/welcomeBackground.png" alt="" 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.6 }}
-
             style={{
               zIndex: 1,
               opacity: welcomeImgWithoutBlurOpacity
@@ -44,8 +43,8 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
             }}
           />
           <motion.h1 className={styles.welcomeMotionText}
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 1}}
+            animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.6 }}
             style={{
               scale: welcomeTextScale,
