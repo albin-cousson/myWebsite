@@ -18,7 +18,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 04/2023 <br/>-<br/> 08/2023
                             </div>
                             <h4>
-                                Développement d&rsquo;un logiciel SASS pour une usine.
+                                Développement d&rsquo;une solution pour effectuer des contrôles qualités dans les usines Spurgin.
                             </h4>
                         </li>
                     </ul>
@@ -56,7 +56,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 02/2022 <br/>-<br/> 02/2023
                             </div>
                             <h4>
-                                Développement de l&rsquo;OMS pour le groupe CoraFR.
+                                Développement d&rsquo;un order Management System (OMS) pour le groupe CoraFR.
                             </h4>
                         </li>
                     </ul>
@@ -75,7 +75,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 08/2021 <br/>-<br/> 02/2022
                             </div>
                             <h4>
-                                Interface pour visualiser les catastrophes naturelles.
+                                Développement d&rsquo;une interface pour visualiser les catastrophes naturelles survenus dans le Grand Est.
                             </h4>
                         </li>
                     </ul>
@@ -94,7 +94,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 02/2021 <br/>-<br/> 08/2021
                             </div>
                             <h4>
-                                Solution de mise en relation employeur / demandeur d&rsquo;emploi.
+                                Développement d&rsquo;une solution de mise en relation employeur / demandeur d&rsquo;emploi.
                             </h4>
                         </li>
                     </ul>
@@ -113,7 +113,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 03/2020 <br/>-<br/> 02/2021
                             </div>
                             <h4>
-                                Développement d&rsquo;une application mobile pour gants connectés qui se désinfecte au contact des UV. 
+                                Développement d&rsquo;une application mobile pour suivre l'état d&rsquo;avancement de la désinfection de ses gants connectés. 
                             </h4>
                         </li>
                     </ul>

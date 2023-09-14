@@ -71,12 +71,12 @@
             justify-content: space-between;
             align-items: baseline;
 
-            a {
+            .footerContactMail {
                 font-size: 30px;
                 color: var(--primary-color);
             }
 
-            p {
+            .footerContactTel {
                 font-size: 30px;
                 text-align: right;
                 color: var(--primary-color);
@@ -97,11 +97,11 @@
             }
             .footerContact {
                 flex-direction: column;
-                a {
+                .footerContactMail {
                     margin-bottom: 28px;
                     font-size: 22px;
                 }
-                p{
+                .footerContactTel{
                     font-size: 22px;
                 }
             }
@@ -121,11 +121,11 @@
             }
             .footerContact {
                 flex-direction: column;
-                a {
+                .footerContactMail {
                     margin-bottom: 26px;
                     font-size: 16px;
                 }
-                p{
+                .footerContactTel{
                     font-size: 16px;
                 }
             }

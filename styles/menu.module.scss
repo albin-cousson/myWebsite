@@ -17,8 +17,8 @@
   border-right: 1px solid var(--primary-color);
   div {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    left: 16px;
+    bottom: 16px;
     font-size: 20px;
     color: var(--default-color);
     @media screen and (max-width: 767px) {
