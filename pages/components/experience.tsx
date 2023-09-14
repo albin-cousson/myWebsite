@@ -56,7 +56,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 02/2022 <br/>-<br/> 02/2023
                             </div>
                             <h4>
-                                Développement d&rsquo;un order Management System (OMS) pour le groupe CoraFR.
+                                Développement d&rsquo;un Order Management System (OMS) pour le groupe CoraFR.
                             </h4>
                         </li>
                     </ul>
