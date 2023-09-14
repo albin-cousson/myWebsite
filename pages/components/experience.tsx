@@ -113,7 +113,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                                 03/2020 <br/>-<br/> 02/2021
                             </div>
                             <h4>
-                                Développement d&rsquo;une application mobile pour suivre l'état d&rsquo;avancement de la désinfection de ses gants connectés. 
+                                Développement d&rsquo;une application mobile pour suivre l&rsquo;état d&rsquo;avancement de la désinfection de ses gants connectés. 
                             </h4>
                         </li>
                     </ul>
