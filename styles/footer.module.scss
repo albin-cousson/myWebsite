@@ -72,11 +72,13 @@
             align-items: baseline;
 
             .footerContactMail {
+                pointer-events: none;
                 font-size: 30px;
                 color: var(--primary-color);
             }
 
             .footerContactTel {
+                pointer-events: none;
                 font-size: 30px;
                 text-align: right;
                 color: var(--primary-color);
