@@ -27,7 +27,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        
+
         display: flex;
         flex: 0 auto;
         flex-direction: column;
@@ -39,22 +39,22 @@
 
         margin: auto auto 80px;
         padding-left: 0;
-       
+
         background-color: transparent;
 
         .footerHeading {
             position: static;
-         
+
             display: flex;
             flex: 0 auto;
             flex-direction: row;
             align-items: center;
-            
+
             width: 90vw;
-            
+
             margin-top: 0;
             margin-bottom: 80px;
-            
+
             font-family: 'Tomato grotesk', Arial, sans-serif;
             font-size: 9vw;
             color: var(--primary-color);
@@ -70,6 +70,23 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
+
+
+            @media screen and (min-width: 991px) {
+                a {
+                    box-shadow: inset 0 0 0 0 var(--primary-color);
+                    color: var(--primary-color);
+                    padding: 0 .25rem;
+                    margin: 0 -.25rem;
+                    transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+                }
+    
+                a:hover {
+                    color: var(--secondary-color);
+                    box-shadow: inset 100vw 0 0 0 var(--primary-color);
+                    ;
+                }
+            }
 
             .footerContactMail {
                 cursor: none;
@@ -90,20 +107,25 @@
 @media screen and (max-width: 991px) {
     .footer {
         height: 50vh;
+
         .footerContent {
             margin-bottom: 80px;
-            .footerHeading{
+
+            .footerHeading {
                 margin-bottom: 23px;
                 font-size: 8vw;
                 letter-spacing: -.02em;
             }
+
             .footerContact {
                 flex-direction: column;
+
                 .footerContactMail {
                     margin-bottom: 28px;
                     font-size: 22px;
                 }
-                .footerContactTel{
+
+                .footerContactTel {
                     font-size: 22px;
                 }
             }
@@ -114,20 +136,25 @@
 @media screen and (max-width: 479px) {
     .footer {
         height: 50vh;
+
         .footerContent {
             margin-bottom: 80px;
-            .footerHeading{
+
+            .footerHeading {
                 margin-bottom: 23px;
                 font-size: 10vw;
                 letter-spacing: -.02em;
             }
+
             .footerContact {
                 flex-direction: column;
+
                 .footerContactMail {
                     margin-bottom: 26px;
                     font-size: 16px;
                 }
-                .footerContactTel{
+
+                .footerContactTel {
                     font-size: 16px;
                 }
             }
