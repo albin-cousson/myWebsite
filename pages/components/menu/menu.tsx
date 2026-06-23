@@ -82,7 +82,7 @@ export default function Menu({handleMenuClick}: {handleMenuClick: any}) {
             animate={isOpen ? "open" : "closed"}
             variants={dateVariant}
             >
-            2023
+            2026
           </motion.div>
         </motion.div>
         <div onClick={() => toggleOpen()}>

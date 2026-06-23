@@ -15,7 +15,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                04/2023 <br/>-<br/> 08/2023
+                                2025 <br/>-<br/> 2026
                             </div>
                             <h4>
                                 Développement d&rsquo;une solution pour effectuer des contrôles qualités dans les usines Spurgin.
@@ -34,7 +34,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                02/2023 <br/>-<br/> 04/2023
+                                2024 <br/>-<br/> 2025
                             </div>
                             <h4>
                                 Update de l&rsquo;interface de l&rsquo;app City Zen.
@@ -53,7 +53,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                02/2022 <br/>-<br/> 02/2023
+                                2023 <br/>-<br/> 2024
                             </div>
                             <h4>
                                 Développement d&rsquo;un Order Management System (OMS) pour le groupe CoraFR.
@@ -72,7 +72,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                08/2021 <br/>-<br/> 02/2022
+                                2022 <br/>-<br/> 2023
                             </div>
                             <h4>
                                 Développement d&rsquo;une interface pour visualiser les catastrophes naturelles survenus dans le Grand Est.
@@ -91,7 +91,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                02/2021 <br/>-<br/> 08/2021
+                                2021 <br/>-<br/> 2022
                             </div>
                             <h4>
                                 Développement d&rsquo;une solution de mise en relation employeur / demandeur d&rsquo;emploi.
@@ -110,7 +110,7 @@ export default function Experience({refForNavigate}: {refForNavigate: any}) {
                     <ul>
                         <li>
                             <div>
-                                03/2020 <br/>-<br/> 02/2021
+                                2020 <br/>-<br/> 2021
                             </div>
                             <h4>
                                 Développement d&rsquo;une application mobile pour suivre la progression de la désinfection de ses gants connectés. 
