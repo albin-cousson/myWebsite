@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+$jungle-night: #07140f;
+$jungle-canopy: #00a149;
+$gold-treasure: #d4af37;
+$gold-treasure-soft: #ecd08c;
+$gold-treasure-deep: #a9842a;
+$parchment-ink: #ece4d3;
+
+$font-display: 'Cinzel', serif;
+
 .welcomeContainer {
   z-index: 5;
   height: 200vh;
@@ -10,7 +21,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: $jungle-night;
+
+  // léger voile jungle/or par-dessus les images pour les fondre dans le thème
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at center, transparent 40%, rgba($jungle-night, 0.7) 100%),
+      linear-gradient(160deg, rgba($jungle-night, 0.35), rgba($jungle-canopy, 0.12) 50%, rgba($jungle-night, 0.45));
+    mix-blend-mode: multiply;
+  }
 }
 
 .welcomeMotionImage {
@@ -24,10 +48,31 @@
 .welcomeMotionText {
   z-index: 3;
   text-align: center;
+  font-family: $font-display;
+  font-weight: 700;
   font-size: 40px;
-  color: var(--secondary-color);
-  text-shadow: 10px 10px 0 var(--default-color);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  color: $gold-treasure-soft;
+  // relief "gravé" doré, plus cohérent que le text-shadow dur d'origine
+  text-shadow:
+    0 1px 0 $gold-treasure-deep,
+    0 2px 0 rgba($jungle-night, 0.6),
+    0 0 35px rgba($jungle-canopy, 0.45);
+
   @media screen and (max-width: 767px) {
     font-size: 30px;
+  }
+
+  // "ALBIN" — dernière ligne, le point d'orgue
+  .highlight {
+    display: inline-block;
+    margin-top: 0.15em;
+    background: linear-gradient(95deg, $gold-treasure-soft, $gold-treasure 55%, $jungle-canopy 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
   }
 }

@@ -1,7 +1,4 @@
 import styles from '@/styles/welcome.module.scss'
-
-import Image from 'next/image'
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from 'react';
 
@@ -50,8 +47,8 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
               scale: welcomeTextScale,
               opacity: welcomeTextOpacity,
             }}
-          > 
-            BIENVENUE<motion.br/> SUR LE<motion.br/> CURRICULUM VITÆ<motion.br/> D&apos;ALBIN
+          >
+            BIENVENUE<motion.br/> SUR LE<motion.br/> CURRICULUM VITÆ<motion.br/> D&apos;<span className={styles.highlight}>ALBIN</span>
           </motion.h1>
         </div>
       </div>

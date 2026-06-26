@@ -1,6 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+$jungle-night: #07140f;
+$jungle-canopy: #00a149;
+$gold-treasure: #d4af37;
+$gold-treasure-soft: #ecd08c;
+$parchment-ink: #ece4d3;
+
+$font-display: 'Cinzel', serif;
+$font-body: 'Spectral', Georgia, serif;
+$font-mono: 'IBM Plex Mono', monospace;
+
 .imageWrapper {
     z-index: -5;
     position: sticky;
     top: 0;
     height: 100vh;
+    overflow: hidden;
+}
+
+// voile teinté jungle/or, en multiply pour se fondre dans la photo plutôt que la cacher
+.tint {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        160deg,
+        rgba($jungle-night, 0.55),
+        rgba($jungle-canopy, 0.18) 45%,
+        rgba($jungle-night, 0.75) 100%
+    );
+    mix-blend-mode: multiply;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(ellipse at center, transparent 45%, rgba($jungle-night, 0.85) 100%);
+}
+
+// repères d'angle façon "viseur d'explorateur" qui a repéré sa cible
+.corner {
+    position: absolute;
+    z-index: 4;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.cornerTL { top: 24px; left: 24px; border-top: 2px solid $gold-treasure; border-left: 2px solid $gold-treasure; }
+.cornerTR { top: 24px; right: 24px; border-top: 2px solid $gold-treasure; border-right: 2px solid $gold-treasure; }
+.cornerBL { bottom: 24px; left: 24px; border-bottom: 2px solid $gold-treasure; border-left: 2px solid $gold-treasure; }
+.cornerBR { bottom: 24px; right: 24px; border-bottom: 2px solid $gold-treasure; border-right: 2px solid $gold-treasure; }
+
+@media screen and (max-width: 767px) {
+    .cornerTL, .cornerTR { top: 14px; }
+    .cornerBL, .cornerBR { bottom: 14px; }
+    .cornerTL, .cornerBL { left: 14px; }
+    .cornerTR, .cornerBR { right: 14px; }
+}
+
+.heroContent {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+
+    .eyebrow {
+        font-family: $font-mono;
+        font-size: 0.75rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba($gold-treasure-soft, 0.85);
+        margin-bottom: 1.25rem;
+    }
+
+    .name {
+        font-family: $font-display;
+        font-weight: 600;
+        font-size: 4.5rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin: 0;
+        background: linear-gradient(95deg, $gold-treasure-soft, $gold-treasure 55%, $jungle-canopy 130%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 60px rgba($jungle-canopy, 0.25);
+
+        @media screen and (max-width: 767px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    .role {
+        margin-top: 1rem;
+        font-family: $font-body;
+        font-style: italic;
+        font-size: 1.4rem;
+        color: rgba($parchment-ink, 0.9);
+
+        @media screen and (max-width: 767px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.scrollCue {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba($gold-treasure-soft, 0.8);
+    font-family: $font-mono;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+
+    .scrollLine {
+        width: 1px;
+        height: 36px;
+        background: linear-gradient(to bottom, $gold-treasure, transparent);
+        animation: scrollPulse 1.8s ease-in-out infinite;
+    }
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scrollLine {
+        animation: none;
+    }
 }

@@ -1,34 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+$jungle-night: #07140f;
+$jungle-night-2: #0f2a1d;
+$jungle-canopy: #00a149;
+$gold-treasure: #d4af37;
+$gold-treasure-deep: #a9842a;
+$parchment-paper: #ece4d3;
+$parchment-paper-deep: #ddd0b3;
+$map-ink: #2a1d12;
+
+$font-display: 'Cinzel', serif;
+
 .skillsContainer {
   z-index: 5;
   position: relative;
   height: 100vh;
-  background: var(--secondary-color);
+  // fond parchemin clair (alternance respectée), sans vert -> le liseré
+  // visible à travers les coins arrondis du bac à sable reste bien clair
+  background:  radial-gradient(circle at 20% 0%, rgba($jungle-canopy, 0.08), transparent 50%),
+        repeating-linear-gradient(135deg, rgba($gold-treasure, 0.02) 0 1px, transparent 1px 14px),
+        linear-gradient(160deg, $jungle-night-2, $jungle-night 75%);;
+
   .playText {
     z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: $font-display;
+    font-weight: 700;
     font-size: 40px;
-    text-shadow: 0px 0px 5px #000;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $gold-treasure;
+    text-shadow:
+      0 1px 0 $gold-treasure-deep,
+      0 0 25px rgba($jungle-canopy, 0.5);
+    text-align: center;
+
     @media screen and (max-width: 767px) {
       font-size: 30px;
+    }
   }
-  }
+
   div {
     z-index: 0;
+    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
     height: 100%;
     width: 100%;
-    border-radius: 0px 0px 30px 30px;
-    background: var(--default-color);
+    border-radius: 0;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 24px),
+      calc(100% - 24px) 100%,
+      24px 100%,
+      0 calc(100% - 24px)
+    );
+    background:
+      radial-gradient(circle at 10% 90%, rgba($gold-treasure, 0.08), transparent 55%),
+      repeating-linear-gradient(135deg, rgba($map-ink, 0.03) 0 1px, transparent 1px 14px),
+      linear-gradient(160deg, $parchment-paper, $parchment-paper-deep 85%);
+    border: 1px solid rgba($gold-treasure, 0.3);
+    border-top: none;
+
     canvas {
       margin: auto;
-      border: var(--secondary-color) 1px solid;
-      border-radius: 6px;
-      box-shadow: 20px;
+      border: 1px solid rgba($gold-treasure, 0.3);
+      box-shadow:
+        0 0 0 1px rgba($jungle-canopy, 0.2),
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba($jungle-canopy, 0.15);
     }
   }
 }

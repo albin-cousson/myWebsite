@@ -30,7 +30,7 @@ export default function ParallaxImage({ refForNavigate }: { refForNavigate: any 
       <div className={styles.imageWrapper}>
         <Image
           src={getImageSource()}
-          alt="Parallax Image"
+          alt="Photo de profil"
           placeholder="blur"
           quality={100}
           fill
@@ -39,6 +39,26 @@ export default function ParallaxImage({ refForNavigate }: { refForNavigate: any 
             objectFit: 'cover',
           }}
         />
+
+        <div className={styles.tint} aria-hidden="true" />
+        <div className={styles.vignette} aria-hidden="true" />
+
+        <span className={`${styles.corner} ${styles.cornerTL}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerTR}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerBL}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerBR}`} aria-hidden="true" />
+
+        <div className={styles.heroContent}>
+          <span className={styles.eyebrow}>Carnet d&rsquo;expédition — édition développeur</span>
+          {/* 👇 remplace par ton nom et ton titre */}
+          <h1 className={styles.name}>Albin Cousson</h1>
+          <p className={styles.role}>Développeur Full-Stack</p>
+        </div>
+
+        <div className={styles.scrollCue} aria-hidden="true">
+          <span>Descendre dans la jungle</span>
+          <div className={styles.scrollLine} />
+        </div>
       </div>
     </>
   );

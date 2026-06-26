@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+$jungle-night: #07140f;
+$jungle-night-2: #0f2a1d;
+$jungle-canopy: #00a149;
+$gold-treasure: #d4af37;
+$gold-treasure-soft: #ecd08c;
+$gold-treasure-deep: #a9842a;
+$parchment-ink: #ece4d3;
+
+$font-display: 'Cinzel', serif;
+$font-body: 'Spectral', Georgia, serif;
+$font-mono: 'IBM Plex Mono', monospace;
+
 .footer {
     z-index: -10;
-
     position: sticky;
     top: 0;
     left: 0;
@@ -19,7 +32,11 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    background-color: var(--secondary-color);
+    background:
+        radial-gradient(circle at 50% 120%, rgba($jungle-canopy, 0.12), transparent 60%),
+        radial-gradient(circle at 85% 10%, rgba($gold-treasure, 0.07), transparent 55%),
+        repeating-linear-gradient(135deg, rgba($gold-treasure, 0.02) 0 1px, transparent 1px 14px),
+        linear-gradient(160deg, $jungle-night-2, $jungle-night 80%);
 
     .footerContent {
         position: relative;
@@ -55,13 +72,20 @@
             margin-top: 0;
             margin-bottom: 80px;
 
-            font-family: 'Tomato grotesk', Arial, sans-serif;
+            font-family: $font-display;
             font-size: 9vw;
-            color: var(--primary-color);
             line-height: 90%;
-            font-weight: 400;
-            letter-spacing: -.04em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
             text-transform: uppercase;
+
+            // dégradé doré -> vert canopée, signature du thème
+            background: linear-gradient(100deg, $gold-treasure-soft, $gold-treasure 45%, $jungle-canopy 110%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            // léger halo pour décoller le titre du fond sombre
+            filter: drop-shadow(0 0 30px rgba($jungle-canopy, 0.2));
         }
 
         .footerContact {
@@ -71,34 +95,38 @@
             justify-content: space-between;
             align-items: baseline;
 
-
             @media screen and (min-width: 991px) {
                 a {
-                    box-shadow: inset 0 0 0 0 var(--primary-color);
-                    color: var(--primary-color);
-                    padding: 0 .25rem;
-                    margin: 0 -.25rem;
+                    box-shadow: inset 0 0 0 0 $gold-treasure;
+                    color: $gold-treasure;
+                    padding: 0 .5rem;
+                    margin: 0 -.5rem;
+                    border-radius: 2px;
                     transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
                 }
-    
+
+                // le fill doré balaye le lien -> "le trésor se révèle"
                 a:hover {
-                    color: var(--secondary-color);
-                    box-shadow: inset 100vw 0 0 0 var(--primary-color);
-                    ;
+                    color: $jungle-night;
+                    box-shadow: inset 100vw 0 0 0 $gold-treasure;
                 }
             }
 
             .footerContactMail {
                 cursor: none;
+                font-family: $font-mono;
                 font-size: 30px;
-                color: var(--primary-color);
+                letter-spacing: 0.02em;
+                color: $gold-treasure;
             }
 
             .footerContactTel {
                 cursor: none;
+                font-family: $font-mono;
                 font-size: 30px;
+                letter-spacing: 0.02em;
                 text-align: right;
-                color: var(--primary-color);
+                color: $gold-treasure;
             }
         }
     }
@@ -114,7 +142,7 @@
             .footerHeading {
                 margin-bottom: 23px;
                 font-size: 8vw;
-                letter-spacing: -.02em;
+                letter-spacing: 0.02em;
             }
 
             .footerContact {
@@ -143,7 +171,7 @@
             .footerHeading {
                 margin-bottom: 23px;
                 font-size: 10vw;
-                letter-spacing: -.02em;
+                letter-spacing: 0.02em;
             }
 
             .footerContact {

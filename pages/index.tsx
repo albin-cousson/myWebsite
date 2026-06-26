@@ -8,7 +8,7 @@ import ParallaxImage from "./components/parallaxImage";
 import Skills from "./components/skills";
 import Intro from "./components/intro";
 import Footer from "./components/footer";
-import Experience from "./components/experience";
+import Experience from "./components/experience/experience";
 import DownloadCvButton from "./components/downloadCvButton";
 
 export default function Home() {
