@@ -22,15 +22,13 @@ $font-mono: 'IBM Plex Mono', monospace;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     width: 100vw;
     height: 80vh;
 
     margin: auto 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 24px;
 
     background:
         radial-gradient(circle at 50% 120%, rgba($jungle-canopy, 0.12), transparent 60%),
@@ -39,36 +37,16 @@ $font-mono: 'IBM Plex Mono', monospace;
         linear-gradient(160deg, $jungle-night-2, $jungle-night 80%);
 
     .footerContent {
-        position: relative;
-        top: auto;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
+        flex: 1;
         display: flex;
-        flex: 0 auto;
         flex-direction: column;
         justify-content: center;
-        align-content: flex-start;
         align-items: flex-start;
 
-        max-width: 100vw;
-
-        margin: auto auto 80px;
-        padding-left: 0;
-
-        background-color: transparent;
+        width: 90vw;
 
         .footerHeading {
-            position: static;
-
-            display: flex;
-            flex: 0 auto;
-            flex-direction: row;
-            align-items: center;
-
-            width: 90vw;
-
+            width: 100%;
             margin-top: 0;
             margin-bottom: 80px;
 
@@ -79,17 +57,15 @@ $font-mono: 'IBM Plex Mono', monospace;
             letter-spacing: 0.02em;
             text-transform: uppercase;
 
-            // dégradé doré -> vert canopée, signature du thème
             background: linear-gradient(100deg, $gold-treasure-soft, $gold-treasure 45%, $jungle-canopy 110%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            // léger halo pour décoller le titre du fond sombre
             filter: drop-shadow(0 0 30px rgba($jungle-canopy, 0.2));
         }
 
         .footerContact {
-            width: 90vw;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -105,7 +81,6 @@ $font-mono: 'IBM Plex Mono', monospace;
                     transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
                 }
 
-                // le fill doré balaye le lien -> "le trésor se révèle"
                 a:hover {
                     color: $jungle-night;
                     box-shadow: inset 100vw 0 0 0 $gold-treasure;
@@ -127,6 +102,38 @@ $font-mono: 'IBM Plex Mono', monospace;
                 letter-spacing: 0.02em;
                 text-align: right;
                 color: $gold-treasure;
+            }
+        }
+
+        .footerSocials {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-top: 23px;
+        }
+
+        .socialLink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            color: $gold-treasure;
+            border: 1px solid rgba($gold-treasure, 0.35);
+            background: transparent;
+            transition: color .35s ease, background .35s ease, border-color .35s ease, transform .25s ease;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                color: $jungle-night;
+                background: $gold-treasure;
+                border-color: $gold-treasure;
+                transform: scale(1.1);
             }
         }
     }
@@ -166,7 +173,7 @@ $font-mono: 'IBM Plex Mono', monospace;
         height: 50vh;
 
         .footerContent {
-            margin-bottom: 80px;
+            margin-bottom: auto;
 
             .footerHeading {
                 margin-bottom: 23px;

@@ -25,9 +25,9 @@ $font-mono: 'IBM Plex Mono', monospace;
     z-index: 1;
     background: linear-gradient(
         160deg,
-        rgba($jungle-night, 0.55),
-        rgba($jungle-canopy, 0.18) 45%,
-        rgba($jungle-night, 0.75) 100%
+        rgba($jungle-night, 0.65),
+        rgba($jungle-canopy, 0.22) 45%,
+        rgba($jungle-night, 0.85) 100%
     );
     mix-blend-mode: multiply;
 }
@@ -36,7 +36,7 @@ $font-mono: 'IBM Plex Mono', monospace;
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: radial-gradient(ellipse at center, transparent 45%, rgba($jungle-night, 0.85) 100%);
+    background: radial-gradient(ellipse at center, rgba($jungle-night, 0.15) 30%, rgba($jungle-night, 0.92) 100%);
 }
 
 // repères d'angle façon "viseur d'explorateur" qui a repéré sa cible
@@ -77,8 +77,9 @@ $font-mono: 'IBM Plex Mono', monospace;
         font-size: 0.75rem;
         letter-spacing: 0.28em;
         text-transform: uppercase;
-        color: rgba($gold-treasure-soft, 0.85);
+        color: $gold-treasure-soft;
         margin-bottom: 1.25rem;
+        text-shadow: 0 1px 8px rgba($jungle-night, 0.9);
     }
 
     .name {
@@ -92,7 +93,8 @@ $font-mono: 'IBM Plex Mono', monospace;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        text-shadow: 0 0 60px rgba($jungle-canopy, 0.25);
+        // text-shadow ne fonctionne pas avec color:transparent, on utilise filter drop-shadow
+        filter: drop-shadow(0 2px 16px rgba($jungle-night, 0.95)) drop-shadow(0 0 40px rgba($jungle-canopy, 0.35));
 
         @media screen and (max-width: 767px) {
             font-size: 2.4rem;
@@ -104,7 +106,8 @@ $font-mono: 'IBM Plex Mono', monospace;
         font-family: $font-body;
         font-style: italic;
         font-size: 1.4rem;
-        color: rgba($parchment-ink, 0.9);
+        color: $parchment-ink;
+        text-shadow: 0 1px 10px rgba($jungle-night, 0.95);
 
         @media screen and (max-width: 767px) {
             font-size: 1rem;
