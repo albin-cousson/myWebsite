@@ -3,7 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from 'react';
 
 export default function Welcome({refForNavigate}: {refForNavigate: any}) {
-  const [endAnimation, setEndAnimationt] = useState(0)
+  // 1 = fallback valide : au scroll=0 les transforms sortent la bonne valeur initiale
+  const [endAnimation, setEndAnimationt] = useState(1)
 
   const { scrollYProgress } = useScroll()
 
@@ -48,7 +49,7 @@ export default function Welcome({refForNavigate}: {refForNavigate: any}) {
               opacity: welcomeTextOpacity,
             }}
           >
-            BIENVENUE<motion.br/> SUR LE<motion.br/> CURRICULUM VITÆ<motion.br/> D&apos;<span className={styles.highlight}>ALBIN</span>
+            BIENVENUE<br/> SUR LE<br/> CURRICULUM VITÆ<br/> D&apos;<span className={styles.highlight}>ALBIN</span>
           </motion.h1>
         </div>
       </div>
