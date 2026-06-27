@@ -7,7 +7,7 @@ export default function Footer({ refForNavigate, isScrollMiddle }: { refForNavig
             <div ref={refForNavigate} className={styles.sectionFooterSpacer}></div>
             <div className={styles.footer} style={{ zIndex: isScrollMiddle ? "0" : "-10" }}>
                 <div className={styles.footerContent}>
-                    <h2 className={styles.footerHeading}>✺ Let's <br />collaborate</h2>
+                    <h2 className={styles.footerHeading}>✺ Let&apos;s <br />collaborate</h2>
                     <div className={styles.footerContact}>
                         <a className={styles.footerContactMail} href="mailto:albincousson7@gmail.com">
                             albincousson7@gmail.com
