@@ -189,39 +189,27 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     Render.run(render);
 
     function createGemRenderer(render: any, Matter: any) {
-      // dessine `text` le long d'un arc, centré en haut de la bille
-      const drawArcText = (
+      const drawCenteredText = (
         ctx: CanvasRenderingContext2D,
         text: string,
         radius: number,
       ) => {
         if (!text) return;
-        const chars = text.toUpperCase().split('');
-        // taille de police proportionnelle au rayon
-        const fontSize = Math.max(10, radius * 0.32);
+        const label = text.toUpperCase();
+        const fontSize = Math.max(10, radius * 0.28);
         ctx.font = `600 ${fontSize}px 'Cinzel', serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
 
-        // le texte court sur un arc ; on calcule l'angle total occupé
-        const arcRadius = radius * 0.66;            // rayon sur lequel court le texte
-        const anglePerChar = (fontSize * 0.92) / arcRadius; // espacement angulaire
-        const totalAngle = anglePerChar * (chars.length - 1);
-        // -PI/2 = haut de la bille ; on centre le mot autour du sommet
-        let angle = -Math.PI / 2 - totalAngle / 2;
+        // ombre portée pour contraste
+        ctx.shadowColor = 'rgba(0,0,0,0.85)';
+        ctx.shadowBlur = 6;
+        ctx.fillStyle = 'rgba(0,0,0,0.55)';
+        ctx.fillText(label, 1, 1);
 
-        chars.forEach((ch) => {
-          ctx.save();
-          ctx.rotate(angle);
-          ctx.translate(0, -arcRadius);  // monter jusqu'à l'arc
-          // ombre creusée + texte doré clair = effet gravé
-          ctx.fillStyle = 'rgba(0,0,0,0.45)';
-          ctx.fillText(ch, 0, fontSize * 0.06);
-          ctx.fillStyle = '#f3e3b0';
-          ctx.fillText(ch, 0, 0);
-          ctx.restore();
-          angle += anglePerChar;
-        });
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = '#f3e3b0';
+        ctx.fillText(label, 0, 0);
       };
 
       const draw = () => {
@@ -235,9 +223,10 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
           const { x, y } = body.position;
           const r = body.circleRadius;
 
+          // gemme + reflet tournent avec la bille
           ctx.save();
           ctx.translate(x, y);
-          ctx.rotate(body.angle); // tout tourne avec la bille : gemme ET texte gravé
+          ctx.rotate(body.angle);
 
           // 1. corps de la gemme : dégradé sphérique
           const grad = ctx.createRadialGradient(-r * 0.35, -r * 0.4, r * 0.1, 0, 0, r);
@@ -254,15 +243,18 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
           ctx.strokeStyle = 'rgba(212, 175, 55, 0.85)';
           ctx.stroke();
 
-          // 3. texte gravé en arc (tourne avec la bille)
-          drawArcText(ctx, body.label, r);
-
-          // 4. reflet spéculaire par-dessus
+          // 3. reflet spéculaire
           ctx.beginPath();
           ctx.ellipse(-r * 0.32, -r * 0.38, r * 0.34, r * 0.2, -0.6, 0, Math.PI * 2);
           ctx.fillStyle = 'rgba(255, 255, 255, 0.30)';
           ctx.fill();
 
+          ctx.restore();
+
+          // texte centré SANS rotation : toujours lisible, au milieu de la bille
+          ctx.save();
+          ctx.translate(x, y);
+          drawCenteredText(ctx, body.label, r);
           ctx.restore();
         }
       };
@@ -293,68 +285,71 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
       Bodies.rectangle(clientWidth / 2, clientHeight + offset, clientWidth, 50.5, options),
     ]
 
+    const BALL_RADIUS = 58;
+    const BALL_GAP = BALL_RADIUS * 2 + 20;
+    let ceilingTimer: ReturnType<typeof setInterval> | undefined;
+
     if (boxIsInView) {
+      const cx = clientWidth / 2;
+      const ballDefs = [
+        { label: 'React.js',   material: 'turquoise' },
+        { label: 'Angular',    material: 'spondyle'  },
+        { label: 'Vue.js',     material: 'jade'      },
+        { label: 'Express.js', material: 'gold'      },
+        { label: 'NestJS',     material: 'spondyle'  },
+        { label: 'Docker',     material: 'turquoise' },
+        { label: 'Git',        material: 'jade'      },
+        { label: 'Jira',       material: 'gold'      },
+        { label: 'Ionic',      material: 'turquoise' },
+        { label: 'Expo',       material: 'obsidian'  },
+        { label: 'Node',       material: 'jade'      },
+        { label: 'REST API',   material: 'gold'      },
+        { label: 'TypeScript', material: 'turquoise' },
+        { label: 'JavaScript', material: 'gold'      },
+        { label: 'CI/CD',      material: 'spondyle'  },
+        { label: 'Unix',       material: 'obsidian'  },
+      ];
+
+      const isDesktop = clientWidth > 911;
+
       bodies.push(
-        Bodies.circle(clientWidth / 2 - 40, -100, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-          label: 'react',
-            plugin: { material: 'turquoise' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 + 40, -100, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-          label: 'angular',
-            plugin: { material: 'spondyle'},
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 - 40, -220, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-           label: 'vue',
-            plugin: { material: 'jade' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 + 40, -220, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-          label: 'express',
-            plugin: { material: 'gold' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 - 40, -340, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-           label: 'nest',
-            plugin: { material: 'spondyle' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 + 40, -340, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-           label: 'docker',
-            plugin: { material: 'turquoise' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 - 40, -460, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-           label: 'git',
-            plugin: { material: 'jade' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
-        }),
-        Bodies.circle(clientWidth / 2 + 40, -460, 75, {
-          frictionAir: 0.02,
-          restitution: 0.6,
-           label: 'jira',
-            plugin: { material: 'gold' },
-            render: { visible: true } // on garde visible pour la physique, mais on retire le sprite
+        ...ballDefs.map(({ label, material }, i) => {
+          let x: number, y: number;
+
+          if (isDesktop) {
+            // PC : 4 colonnes étalées, faible hauteur de départ → tombent presque ensemble
+            const numCols = 4;
+            const colIndex = i % numCols;
+            const rowIndex = Math.floor(i / numCols);
+            x = (clientWidth / (numCols + 1)) * (colIndex + 1);
+            y = -(80 + rowIndex * 60);
+          } else {
+            // Mobile : 2 colonnes centrées, empilées en hauteur
+            x = i % 2 === 0 ? cx - BALL_RADIUS - 10 : cx + BALL_RADIUS + 10;
+            y = -(100 + Math.floor(i / 2) * BALL_GAP);
+          }
+
+          return Bodies.circle(x, y, BALL_RADIUS, {
+            frictionAir: 0.02,
+            restitution: 0.6,
+            label,
+            plugin: { material },
+            render: { visible: true },
+          });
         })
       )
-      setTimeout(() => {
-        Composite.add(world, Bodies.rectangle(clientWidth / 2, -offset, clientWidth, 50.5, options))
-      }, 2000)
+      // Ajoute le plafond uniquement quand toutes les boules sont entrées dans le canvas
+      const ceilingTimer = setInterval(() => {
+        const gemBodies = Matter.Composite.allBodies(world)
+          .filter((b: any) => b.plugin?.material && b.circleRadius);
+        if (
+          gemBodies.length === ballDefs.length &&
+          gemBodies.every((b: any) => b.position.y > 0)
+        ) {
+          clearInterval(ceilingTimer);
+          Composite.add(world, Bodies.rectangle(clientWidth / 2, -offset, clientWidth, 50.5, options));
+        }
+      }, 300);
     }
 
     Composite.add(world, bodies)
@@ -460,6 +455,7 @@ export default function Skills({ refForNavigate }: { refForNavigate: any }) {
     }
 
     return () => {
+      if (ceilingTimer) clearInterval(ceilingTimer);
       cleanupBackdrop();
       cleanupGems();
       Render.stop(render);
