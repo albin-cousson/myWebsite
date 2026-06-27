@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useRef, useEffect } from "react";
-import { motion, sync, useCycle } from "framer-motion";
+import { motion, AnimatePresence, useCycle } from "framer-motion";
 import MenuToggle from "./menuToggle";
 import Navigation from "./navigation";
 
@@ -61,10 +61,22 @@ export default function Menu({handleMenuClick}: {handleMenuClick: any}) {
       dimensions.current.width = containerRef.current.offsetWidth;
       dimensions.current.height = containerRef.current.offsetHeight;
     }
-  }, [containerRef.current]);;
+  }, [containerRef.current]);
 
   return (
     <>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={styles.overlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => toggleOpen()}
+          />
+        )}
+      </AnimatePresence>
       <MenuToggle
         toggle={() => toggleOpen()}
         isOpen={isOpen}
@@ -78,7 +90,7 @@ export default function Menu({handleMenuClick}: {handleMenuClick: any}) {
         ref={containerRef}
       >
         <motion.div className={styles.background} variants={sidebar} >
-          <motion.div 
+          <motion.div
             animate={isOpen ? "open" : "closed"}
             variants={dateVariant}
             >
