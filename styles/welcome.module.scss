@@ -47,6 +47,7 @@ $font-display: 'Cinzel', serif;
 
 .welcomeMotionText {
   z-index: 3;
+  will-change: transform, opacity;
   text-align: center;
   font-family: $font-display;
   font-weight: 700;
